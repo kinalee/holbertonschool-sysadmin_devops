@@ -1,4 +1,3 @@
-.
 .TH man 2 "04 May 2015" 0.32 "holberton man page"
 .SH NAME
 holberton - become a full-stack software engineer.
@@ -13,4 +12,5 @@ peerlearning(2), projectbased(2), fullstack(2), Betty(1)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Julien Barnier, Sylvain Kalache, Sophie Barbier, Guillaume Salba, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+Julien Barnier, Sylvain Kalache, Sophie Barbier, Guillaume Salba, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton 
+mentors
