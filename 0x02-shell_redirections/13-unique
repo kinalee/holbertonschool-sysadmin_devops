@@ -1,2 +1,2 @@
 #!/bin/bash
-sort u < cat list
+sort u < list
