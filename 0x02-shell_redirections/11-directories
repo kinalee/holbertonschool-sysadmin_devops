@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -xtype d | wc -l
+find . -xtype d -name !".", ".." | wc -l
