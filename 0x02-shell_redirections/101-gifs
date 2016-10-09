@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 | find -type f -name "*.gif" -printf '%f\n' | sort --ignore-case
+ls -a1 | find -type f -name "*.gif" -printf '%f\n' | sort -f
