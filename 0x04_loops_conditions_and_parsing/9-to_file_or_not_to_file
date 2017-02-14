@@ -8,8 +8,6 @@ then
     if [ -f $FILE ]
     then
 	echo "holbertonschool is a regular file"
-    else
-	echo ""
     fi
     if [ -s $FILE ]
     then
