@@ -3,3 +3,4 @@
 # return a page that contains the string "Holberton School"
 sudo apt-get install -y nginx
 sudo service nginx start
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
