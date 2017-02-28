@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Redirects to 404
+
+sudo apt-get install -y nginx
+sudo service nginx start
+sudo sed -i '25a\ \terror_page 404 /custom_404.html;' /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo service nginx restart
