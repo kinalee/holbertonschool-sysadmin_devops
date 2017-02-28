@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Install nginx and
+# return a page that contains the string "Holberton School"
+sudo apt-get install -y nginx
+sudo service nginx start
