@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configure HAproxy to send traffic to web01 and web02
+
+sudo apt-get update
+sudo apt-get install haproxy
+sudo sed -i '2i\ ENABLED=1;' /etc/default/haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+sudo sed -i '24a\ listen appname 0.0.0.0:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 79-web-01 52.91.42.130:80 check\n\tserver 79-web-02 54.209.38.142:80 check\n\t' /etc/haproxy/haproxy.cfg
+sudo service haproxy start

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Configure web-02 tobe identical to web-01
+# Configure custom HTTP header name to "X-Served-by"
+# Configure custom HTTP header value to the hostname
+
+sudo apt-get install -y nginx
+sudo service nginx start
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "25a\ \trewrite ^/redirect_me https://lingojam.com/EnglishtoEnglishLanguageTranslator permanent;" /etc/nginx/sites-enabled/default
+sudo sed -i '25a\ \terror_page 404 /custom_404.html;' /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo sed -i '20a\ \tadd_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
+sudo service nginx restart
