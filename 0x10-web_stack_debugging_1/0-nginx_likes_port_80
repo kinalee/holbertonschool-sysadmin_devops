@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Config nginx to listen to port 80
-# sudo kill [pid] to kill nginx that was already running on port 8080
-sudo service nginx stop
 sed -i "s/listen 8080/listen 80/" /etc/nginx/sites-available/default
-sudo service nginx start
+sudo service nginx restart
