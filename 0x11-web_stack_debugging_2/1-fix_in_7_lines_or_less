@@ -4,4 +4,4 @@ sudo pkill apache2
 sed -i "/user/c\user nginx;" /etc/nginx/nginx.conf
 sed -i "21c\ \tlisten 8080 default_server;" /etc/nginx/sites-enabled/default
 sed -i "22c\ \tlisten [::]:8080 default_server ipv6only=on;" /etc/nginx/sites-enabled/default
-sudo service nginx start
+service nginx start
