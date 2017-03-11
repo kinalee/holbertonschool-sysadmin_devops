@@ -2,6 +2,6 @@
 # nginx must be running as nginx user and nginx must be listening on all active IPs on port 8080
 sudo pkill apache2
 sed -i "/user/c\user nginx;" /etc/nginx/nginx.conf
-sed -i "/listen 80/c\ \tlisten 8080 default_server;" /etc/nginx/sites-enabled/default
-sudo sed -i "s/:80/:8080/" /etc/nginx/sites-enabled/default
-sudo service nginx restart
+sed -i "21c\ \tlisten 8080 default_server;" /etc/nginx/sites-enabled/default
+sed -i "22c\ \tlisten [::]:8080 default_server ipv6only=on;" /etc/nginx/sites-enabled/default
+sudo service nginx start
