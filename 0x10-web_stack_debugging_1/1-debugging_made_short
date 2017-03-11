@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Config nginx to listen to port 80
+# service nginx status should be "not running"
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+service nginx start
