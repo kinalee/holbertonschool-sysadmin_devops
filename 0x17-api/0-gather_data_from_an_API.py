@@ -5,6 +5,7 @@ Returns infomation about an employee's todo list progress when ID is given
 import sys
 import requests
 
+
 def gather_api_data(userId):
     api = 'https://jsonplaceholder.typicode.com'
     name = requests.get(api + '/users/' + sys.argv[1]).json().get("name")
@@ -20,4 +21,8 @@ def gather_api_data(userId):
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        gather_api_data(sys.argv[1])
+        try:
+            userId = int(sys.argv[1])
+            gather_api_data(userId)
+        except:
+            pass
