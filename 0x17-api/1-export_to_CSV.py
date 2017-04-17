@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          '/todos').json()
     filename = "{}.csv".format(sys.argv[1])
 
-    with open(filename, 'w') as cf:
+    with open(filename, mode='w') as cf:
         writer = csv.writer(cf, delimiter=',', quotechar='"',
                             quoting=csv.QUOTE_ALL)
         for task in todos:
