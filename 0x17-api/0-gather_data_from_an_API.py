@@ -5,7 +5,7 @@ Returns infomation about an employee's todo list progress when ID is given
 import sys
 import requests
 
-def gather_api_data(emId):
+def gather_api_data(userId):
     api = 'https://jsonplaceholder.typicode.com'
     name = requests.get(api + '/users/' + sys.argv[1]).json().get("name")
     todos = requests.get(api + '/todos?userId=' + sys.argv[1]).json()
