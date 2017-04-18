@@ -9,7 +9,7 @@ import csv
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        api = 'https://jsonplaceholder.typicode.com'
+        api = "https://jsonplaceholder.typicode.com"
         username = requests.get(api + '/users/' +
                                 sys.argv[1]).json().get("username")
         todos = requests.get(api + '/users/' + sys.argv[1] +
