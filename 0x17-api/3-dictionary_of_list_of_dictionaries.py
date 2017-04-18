@@ -2,8 +2,8 @@
 """
 Using task #0, export data in the JSON format for all employees
 """
-import requests
 import json
+import requests
 
 
 if __name__ == "__main__":
