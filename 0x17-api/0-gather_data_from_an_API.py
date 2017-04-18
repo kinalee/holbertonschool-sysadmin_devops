@@ -16,7 +16,7 @@ def gather_api_data(userId):
     print("Employee {} is done with tasks({:d}/{:d}):".
           format(name, len(completed), len(todos)))
     for task in completed:
-        print("\t", end="")
+        print("\t ", end="")
         print(task.get("title"))
 
 if __name__ == "__main__":
