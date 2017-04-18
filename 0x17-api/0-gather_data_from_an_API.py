@@ -2,8 +2,8 @@
 """
 Returns infomation about an employee's todo list progress when ID is given
 """
-import sys
 import requests
+import sys
 
 
 def gather_api_data(userId):
