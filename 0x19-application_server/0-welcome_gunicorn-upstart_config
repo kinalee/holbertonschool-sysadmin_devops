@@ -1,0 +1,14 @@
+# Upstart script that starts Gunicorn to serve web_flask/0-hello_route.py
+
+description "Gunicorn application server running airbnb onepage"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+setuid ubuntu
+setgid www-data
+
+env PATH=/home/user/AirBnB_clone_v4/airbnbenv/bin
+chdir /home/user/AirBnB_clone_v4
+exec gunicorn --workers 3 --bind 127.0.0.1:8001 web_flask/0-hello_route.py
